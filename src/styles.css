@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.container {
+    background-color: #1D1E22;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.connectionStatus {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.gauge {
+    width: 400px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: thin;
+    color: #AAAAAC;
+}
+
+.gauge__body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #4F5054;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+
+.gauge__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #03030A;
+    transform-origin: center top;
+    transition: transform 0.2s ease-out;
+}
+
+.gauge__cover {
+    width: 75%;
+    height: 150%;
+    background: #1D1E22;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #B0B0A4;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .title {
+        font-size: 32px;
+        width: 70%;
+        margin-bottom: 120px;
+    }
+
+    .gauge {
+        width: 270px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 24px;
+        width: 70%;
+        margin-bottom: 200px;
+    }
+
+    .gauge {
+        width: 250px;
+    }
+
+    .footer {
+        font-size: 12px;
+        margin-bottom: 50px;
+    }
+}
